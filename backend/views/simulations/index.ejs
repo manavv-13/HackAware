@@ -1,0 +1,15 @@
+<% layout('layouts/boilerplate') %>
+<h2 class="ms-5 mt-3">Data Breach Scenarios</h2>
+<div class="index-container row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1 mt-3 ms-5">
+  <% simulations.forEach(simulation => { %>
+    <div class="card simulation-card mb-3">
+      <img src="https://www.rivialsecurity.com/hubfs/Marketing%20Photos/AdobeStock_362074732.jpeg" class="card-img-top" alt="...">
+      <div class="card-body mt-2">
+        <h5 class="card-title"><%= simulation.name %></h5>
+        <p class="card-text"><%= simulation.description %></p>
+        <a href="/simulations/<%= simulation._id %>" class="btn btn-primary">Start Scenario</a>
+      </div>
+    </div>
+  <% }) %>
+  </div>
+

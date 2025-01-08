@@ -1,0 +1,17 @@
+<% layout('layouts/boilerplate') %>
+
+<h2 class="ms-5 mt-3">Step <%= step.stepNumber %>: <%= step.description %></h2>
+
+<form action="/simulations/<%= simulation._id %>/step/<%= step.stepNumber %>" method="POST">
+  <div class="form-group ms-5 mt-3">
+    <% step.choices.forEach(choice => { %>
+      <div class="form-check ms-5 mt-3">
+        <input class="form-check-input ms-5 mt-3" type="radio" name="decision" id="<%= choice.decision %>" value="<%= choice.decision %>" required>
+        <label class="form-check-label ms-5 mt-3" for="<%= choice.decision %>">
+          <%= choice.decision %>
+        </label>
+      </div>
+    <% }) %>
+  </div>
+  <button type="submit" class=" ms-5 mt-3 btn btn-primary">Submit Decision</button>
+</form>

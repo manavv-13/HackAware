@@ -1,0 +1,36 @@
+
+body{
+    font-family: "Roboto Mono", monospace !important;
+    display:flex;
+    min-height:100vh;
+    /* width:100% !important; */
+    flex-direction:column;
+}
+.main-icon{
+    color:rgb(55, 0, 255);
+}
+.container{
+    flex:1 !important;
+}
+.home-container{
+    width:100vw !important;
+}
+
+.index-container{
+    /* gap:20px !important; */
+    margin-bottom:2rem !important;
+}
+
+.simulation-card{
+    border: none!important;
+}
+
+.card-body{
+    padding:0 !important;
+}
+
+.card-img-top{
+    border-radius:1rem!important;
+    width:100% !important;
+    object-fit:cover !important;
+}

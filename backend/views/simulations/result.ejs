@@ -1,0 +1,20 @@
+<% layout('layouts/boilerplate') %>
+<h2 class="ms-5 mt-3">Simulation Results</h2>
+
+<ul class="ms-5 mt-3 list-group">
+  <% userChoices.forEach((choice, index) => { %>
+    <li class="ms-5 mt-3 list-group-item">
+      <h5>Step <%= choice.stepNumber %></h5>
+      <p>Decision: <%= choice.decision %></p>
+      <p>Outcome: <%= choice.outcome %></p>
+      <% if (!choice.isCorrect) { %>
+        <p class="ms-5 mt-3 text-danger">This was an incorrect choice.</p>
+        <p>Suggested Preventive Measures: <%= choice.preventiveMeasures %></p>
+      <% } else { %>
+        <p class="ms-5 mt-3 text-success">This was a correct choice.</p>
+      <% } %>
+    </li>
+  <% }) %>
+</ul>
+
+<a href="/simulations" class="ms-5 mt-3 btn btn-primary mt-4">Back to Simulations</a>
